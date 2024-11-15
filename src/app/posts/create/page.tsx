@@ -11,7 +11,6 @@ import {
 } from 'antd';
 import { PostRequest } from '@/types/post-request';
 
-const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
 export default function Home() {
