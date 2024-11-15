@@ -1,5 +1,5 @@
 import { Button, Layout, Menu, MenuProps } from "antd";
-import { HomeFilled, MenuFoldOutlined, MenuUnfoldOutlined, MoneyCollectFilled } from '@ant-design/icons';
+import { DesktopOutlined, FileOutlined, HomeFilled, HomeTwoTone, MenuFoldOutlined, MenuUnfoldOutlined, MoneyCollectFilled, PieChartOutlined, TeamOutlined, TransactionOutlined, UserOutlined } from '@ant-design/icons';
 import { useContext } from "react";
 import Link from "next/link";
 import { DashboardContext } from "@/common/context/DashboardContext";
@@ -12,17 +12,17 @@ interface ISidebar {
 
 const sidebarItem: MenuProps['items'] = [
     {
-        key: '1',
+        key: '/',
         icon: <HomeFilled />,
         label: 'Home',
     },
     {
-        key: '2',
+        key: 'transaction',
         icon: <MoneyCollectFilled />,
         label: 'Transaction',
         children: [
             {
-                key: '1',
+                key: 'topup',
                 label: <Link href={`/topup`}>{`topup`}</Link>
             }
         ]
@@ -64,8 +64,12 @@ export default function Sidebar({ colorBgContainer }: ISidebar) {
 
             <div className="demo-logo-vertical" />
             <Menu
-                theme="dark"
+                style={{
+                    background: colorBgContainer
+                }}
                 mode="inline"
+                defaultSelectedKeys={['topup']}
+                defaultOpenKeys={['transaction']}
                 items={sidebarItem}
             />
         </Sider>

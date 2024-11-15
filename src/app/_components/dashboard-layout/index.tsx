@@ -46,6 +46,7 @@ export default function DashboardLayout({ children, breadcrumb }: IDashboardLayo
           </Content>
         </Layout>
         {/* end content */}
+
       </Layout>
     </Layout>
   )

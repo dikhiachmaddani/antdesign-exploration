@@ -19,6 +19,7 @@ export default function Home() {
     const onFinish = (values: PostRequest) => {
         console.log('Form values:', values);
     };
+
     return (
         <DashboardLayout breadcrumb={[{ title: 'Home' }, { title: 'Post' }]}>
             <Flex align='center' justify='space-between' style={{ marginBottom: 20 }}>

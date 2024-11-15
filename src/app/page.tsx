@@ -11,7 +11,6 @@ export default function Home() {
 
   const router = useRouter();
   const { data: posts = [] } = usePosts();
-
   const columns = [
     {
       title: "Title",
@@ -28,10 +27,10 @@ export default function Home() {
       title: "Action",
       key: "id",
       width: "auto",
-      render: (posts: PostResponse) => (<Link href={`posts/${posts.id}`}>Detail</Link>)
+      render: (posts: PostResponse) => (<Link type='primary' href={`posts/${posts.id}`}>Detail</Link>)
     },
   ];
-
+  
   return (
     <DashboardLayout breadcrumb={[{ title: 'Home' }]}>
       <Flex align='center' justify='space-between' style={{ marginBottom: 20 }}>
