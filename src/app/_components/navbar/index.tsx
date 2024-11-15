@@ -18,7 +18,18 @@ const items: MenuProps['items'] = [
 
 export default function Navbar({ colorBgContainer }: INavbar) {
     return (
-        <Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px', background: colorBgContainer }}>
+        <Header
+            style={{
+                position: 'sticky',
+                top: 0,
+                zIndex: 1,
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
+                padding: '24px', 
+                background: colorBgContainer
+            }}>
             <div></div>
             <Dropdown menu={{ items }}>
                 <a onClick={(e) => e.preventDefault()}>
