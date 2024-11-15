@@ -13,17 +13,6 @@ import {
 const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 
-
-const formItemLayout = {
-    labelCol: {
-        xs: { span: 24 },
-        sm: { span: 24 },
-    },
-    wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 24 },
-    },
-};
 export default function Home() {
     const router = useRouter();
 
@@ -33,17 +22,18 @@ export default function Home() {
                 <Button color='primary' onClick={() => router.push('/')}>{`< Back to Post`}</Button>
             </Flex>
             <Form
-                {...formItemLayout}
+                layout='vertical'
+                labelCol={{ span: 4 }}
+                wrapperCol={{ span: 24 }}
             >
                 <Form.Item
-                    layout="vertical"
                     label="Title"
                     name='title'
                     rules={[{ required: true, message: 'Please input!' }]}
                 >
                     <Input />
                 </Form.Item>
-                <Form.Item layout="vertical" label="Deskripsi">
+                <Form.Item label="Deskripsi">
                     <TextArea rows={5} />
                 </Form.Item>
                 <Form.Item>
